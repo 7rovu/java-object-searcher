@@ -35,9 +35,8 @@ public class SearchRequstByBFS {
     private String err_log_file;
 
 
-    public SearchRequstByBFS(Object target, List<Keyword> keys){
+    public SearchRequstByBFS(Object target){
         this.target = target;
-        this.keys = keys;
         //把当前的元素加入到队列尾
         q.offer(new NodeT.Builder().setChain("").setField_name("TargetObject").setField_object(target).build());
     }
@@ -54,7 +53,9 @@ public class SearchRequstByBFS {
         }
     }
 
-
+    public void addKey(Keyword keyword){
+        this.keys.add(keyword);
+    }
     public void setBlacklists(List<Blacklist> blacklists) {
         this.blacklists = blacklists;
     }

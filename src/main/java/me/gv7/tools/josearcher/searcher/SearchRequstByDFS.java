@@ -34,11 +34,14 @@ public class SearchRequstByDFS {
     private Set<Object> visited = new HashSet<Object>();
 
 
-    public SearchRequstByDFS(Object target, List<Keyword> keys){
+    public SearchRequstByDFS(Object target){
         this.target = target;
-        this.keys = keys;
         this.result_file = String.format("%s_result_%s.txt",model_name,getCurrentDate());
         this.all_chain_file = String.format("%s_log_%s.txt",model_name,getCurrentDate());
+    }
+
+    public void addKey(Keyword keyword){
+        this.keys.add(keyword);
     }
 
     public void initSavePath(){
