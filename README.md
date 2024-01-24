@@ -31,7 +31,7 @@ c0ny1师傅写的原版工具在idea中计算表达式时会卡在evaluating...
 SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
 ```
 
-
+![image-20240124231625635](https://raw.githubusercontent.com/7rovu/java-object-searcher/master/README.assets/image-20240124231625635.png)
 
 
 
@@ -40,14 +40,14 @@ SearchRequstByBFS searcher = new SearchRequstByBFS(Thread.currentThread(),keys);
 ```
 # 修改SearchRequstByBFS和SearchRequstByDFS构造函数
 public SearchRequstByBFS(Object target){
-	this.target = target;
-	//把当前的元素加入到队列尾
-	q.offer(new NodeT.Builder().setChain("").setField_name("TargetObject").setField_object(target).build());
+  this.target = target;
+  //把当前的元素加入到队列尾
+  q.offer(new NodeT.Builder().setChain("").setField_name("TargetObject").setField_object(target).build());
 }
 
 # 添加addKey()
 public void addKey(Keyword keyword){
-	this.keys.add(keyword);
+  this.keys.add(keyword);
 }
 ```
 
@@ -74,3 +74,4 @@ searcher.setReport_save_path("D:\\apache-tomcat-7.0.94\\bin");
 searcher.searchObject();
 ```
 
+![image-20240124233339278](https://raw.githubusercontent.com/7rovu/java-object-searcher/master/README.assets/image-20240124233339278.png)
