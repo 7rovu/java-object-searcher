@@ -16,13 +16,6 @@
    github: http://github.com/c0ny1/java-object-searcher
 #############################################################
 ```
-
-配合IDEA在Java应用运行时，对内存中的对象进行搜索。比如可以可以用挖掘request对象用于回显，辅助构造java内存webshell等场景。
-
-
-
-## 0x02 修改版本
-
 c0ny1师傅写的原版工具在idea中计算表达式时会卡在evaluating...
 
 经测试，使用ArrayList进行函数传参是罪魁祸首，至于bug原理就不太清楚了，也就是下面这句：
@@ -53,7 +46,7 @@ public void addKey(Keyword keyword){
 
 
 
-## 0x03 使用步骤
+## 0x02 使用步骤
 
 ```
 //定义黑名单
